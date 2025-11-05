@@ -1,6 +1,6 @@
 # 概要
 
-これは、Next.js と Vercel AI SDK を利用した。自動動画生成サービスです。
+これは、Next.js と Vercel AI SDK を利用した。自動動画生成サービス「Story Smith Agent」の PRD です。
 
 # ゴール
 
@@ -23,9 +23,32 @@ LLM が全体のオーケストレーションすると、毎回 json 全体の�
 
 # UI/UX について
 
-基本的には高品質な AI サービスとして実装できるよう、AI に関する部分は Vercel AI SDK を最大限活用します。他のパーツについても shadcn/ui を用いて高品質なコンポーネント作りを意識します。
+## アーキテクチャ
 
-- input や approve,workflow の進捗表示灯があるので、基本的な json 生成フローは Codex のようなエージェントサービスのような UX にすべきです。
+チャットファースト型 UI（Codex/Claude Code 風）を採用。Vercel AI SDK の AI Elements を最大限活用し、shadcn/ui で高品質なコンポーネントを構築します。
+
+## レイアウト
+
+- **メインエリア**: 左側のチャットインターフェースと入力エリア
+- **右サイドバー**: 右側に生成状態と JSON プレビュー（折りたたみ可能）
+- **入力エリア**: 下部に設定選択とメッセージ入力を統合
+
+## 実装方針
+
+- ユーザーの入力を待機している時は、チャットエリアに AI Elements の Shimmer コンポーネントを表示し、「Story Smith Agent」の文字列をかっこよく見せる
+- `useChat` hook による会話管理、`StreamingTextResponse`でリアルタイム表示
+- Tool calling UI で設定入力、Suggested actions で承認フロー実装
+- ChatUI は AI Elements の Convasation で表示
+- チャットへの入力は AI Elements の Prompt Input で表示
+  - config は tool select で設定
+- 各ワークフローの TODO と進捗は AI Elements の Queue で表示(毎回一緒になるはず)
+- エージェント・ワークフローの処理は AI Elements の Chain of Thought で表現
+  - シングルトンに json が入ったタイミングでは AI Elements の Tool で結果を表示
+  - その他必要があれば、AI Elements の Task を効果的に利用
+- 推奨画像はインライングリッド、AI Elements の Plan で表示
+- 承認ポイントでは AI Elements の Confirmation を表示
+
+ユーザーは複雑なワークフローを意識せず、AI との対話を通じて自然に動画生成まで導かれます。
 
 # 各ワークフローの紹介
 

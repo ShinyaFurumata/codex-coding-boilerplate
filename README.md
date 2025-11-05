@@ -30,10 +30,14 @@ codex-coding-boilerplate/
 
 # 使い方
 
+## PRD の準備
+
+PRD-example.md を参考に、PRD.md を作成してください。
+
 ## 環境構築
 
 ```
-PRD-example.mdを確認して、0からの環境構築のための ExecPlan を作成してください。
+PRD.mdを確認して、0からの環境構築のための ExecPlan を作成してください。
 ```
 
 ## 小さなタスク

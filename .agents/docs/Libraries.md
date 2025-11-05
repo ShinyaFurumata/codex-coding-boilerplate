@@ -4,10 +4,11 @@
 Vercel 製の product は進化が早いので、最新ドキュメントを参照するように心がける
 
 - 基本となる構成
+  - node 管理: nodenv
   - 言語: Typescript
   - フレームワーク: Nextjs 16 (with "next-devtools-mcp")
   - types: Zod
-  - CSS: tailwind
+  - CSS: tailwind css
   - component: shadcn(use mcp), Vercel AI Elements(use mcp)
   - icon: lucide-react
   - PaaS・Web サーバー: Vercel
