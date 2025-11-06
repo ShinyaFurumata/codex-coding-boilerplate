@@ -11,7 +11,7 @@ Vercel 製の product は進化が早いので、最新ドキュメントを参�
   - CSS: tailwind css
   - component: shadcn(use mcp), Vercel AI Elements(use mcp)
   - icon: lucide-react
-  - PaaS・Web サーバー: Vercel
+  - ホスティング: Vercel
 - 必要があれば順次追加(ユーザーの許可が必要)
   - AI・LLM: Vercel AI SDK
   - LLM model: with Vercel AI Gateway
@@ -24,7 +24,7 @@ Vercel 製の product は進化が早いので、最新ドキュメントを参�
   - デバッグ: Playwright MCP + next-devtools-mcp
   - テスト: Vitest 4 ユニットテスト/単体テスト
   - ブラウザテスト: Vitest 4 + Playwright
-  - キュー、マイクロサービス、Kafka、SQS、重めの AI 処理: vercel workflow
+  - Backend(キュー、マイクロサービス、Kafka、SQS、重い AI 処理): vercel workflow
   - cron: Vercel cron jobs
 
 # 利用中のライブラリ・フレームワーク
