@@ -7,6 +7,7 @@ Vercel 製の product は進化が早いので、最新ドキュメントを参�
   - node 管理: nodenv
   - 言語: Typescript
   - フレームワーク: Nextjs 16 (with "next-devtools-mcp")
+  - リンター・フォーマッター: ES Lint, prettier
   - バリデーション: Zod
   - CSS: tailwind css
   - component: shadcn(use mcp), Vercel AI Elements(use mcp)
@@ -17,7 +18,7 @@ Vercel 製の product は進化が早いので、最新ドキュメントを参�
   - LLM model: with Vercel AI Gateway
     - gemini-2.5-flash-lite(汎用タスク)
     - grok-4-fast-non-reasoning(少し高度なタスク)
-  - DB: Turso
+  - DB・ベクトル DB: Turso
   - ORM: Drizzle
   - Auth: Better Auth(Auth.js に近いシンプルなもの)
   - メール配信: Resend
