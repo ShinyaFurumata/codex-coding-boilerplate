@@ -20,6 +20,7 @@ Vercel 製の product は進化が早いので、最新ドキュメントを参�
   - DB: Turso
   - ORM: Drizzle
   - Auth: Better Auth(Auth.js に近いシンプルなもの)
+  - メール配信: Resend
   - 状態管理: Zustand（useContext で十分な場合は必要なし）
   - デバッグ: Playwright MCP + next-devtools-mcp
   - テスト: Vitest 4 ユニットテスト/単体テスト
