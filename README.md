@@ -24,21 +24,32 @@ codex-coding-boilerplate/
 ├── AGENTS.md            # AIエージェント向けの基本設定とルール
 ├── long-task-prompts-example.md  # 長期的タスク実行時のプロンプト例
 ├── MCP-example.md       # MCPサーバー設定例（config.toml / mcp.json）
-├── PRD-example.md       # プロダクト要件定義（PRD）の例とワークフロー設計
+├── ARCHITECTURE-example.md       # プロダクト要件定義（PRD）の例とワークフロー設計
 └── README.md            # 本ファイル（プロジェクト概要と使い方）
 ```
 
 # 使い方
 
-## PRD の準備
+## ARCHITECTURE の準備
 
-PRD-example.md を参考に、PRD.md を作成してください。
-
-## 環境構築
+ARCHITECTURE-example.md を参考に、ARCHITECTURE.md を作成してください。
+※ Claude Code を利用する場合は、AGENTS.md をコピーして、CLAUDE.md を作成してください。
 
 ```
-PRD.mdを確認して、0からの環境構築のための ExecPlan を作成してください。
+cp AGENTS.md CLAUDE.md
 ```
+
+## 環境構築 の開始
+
+```
+ARCHITECTURE.mdを確認して、0からの環境構築するための ExecPlan を作成してください。
+```
+
+## MCP の準備
+
+MCP-example.md を確認して、エージェントに合わせた MCP 設定を行ってください。
+
+# Vibe Coding の仕方
 
 ## 小さなタスク
 
@@ -50,16 +61,16 @@ PRD.mdを確認して、0からの環境構築のための ExecPlan を作成し
 長時間のタスクを long-task-prompts-example.md を参考にして、ExecPlan を明示的に実行してください。
 ※ 指示がなくても、複雑な設計や大規模な作業であれば、エージェントは自動的に ExecPlan を実行します。
 
-# 開発フロー
+# おすすめの開発フロー
 
 1.実装
-小さなタスクは Cursor の Agents や Claude Code で、長期的なタスクは Codex で実装します。
+小さなタスクは Cursor の Agents で、長期的なタスクは Codex, Claude Code で実装します。
 
 2.ローカルレビュー
-Codex CLI を利用して、`review`コマンドを実行します。
+Codex CLI を利用して、`/review`コマンドを実行します。
 
 3.PR レビュー
-Cloud で Codex review を走らせます。
+Codex で Codex review を走らせます。
 
 4.マージ
 

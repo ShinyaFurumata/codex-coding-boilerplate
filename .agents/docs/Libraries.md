@@ -15,9 +15,9 @@ Vercel 製の product は進化が早いので、最新ドキュメントを参�
   - ホスティング: Vercel
 - 必要があれば順次追加(ユーザーの許可が必要)
   - AI・LLM: Vercel AI SDK
-  - LLM model: with Vercel AI Gateway
-    - gemini-2.5-flash-lite(汎用タスク)
-    - grok-4-fast-non-reasoning(少し高度なタスク)
+    - model provider: Vercel AI Gateway
+      - gemini-2.5-flash-lite(汎用タスク)
+      - grok-4-fast-non-reasoning(少し高度なタスク)
   - DB・ベクトル DB: Turso
   - ORM: Drizzle
   - Auth: Better Auth(Auth.js に近いシンプルなもの)

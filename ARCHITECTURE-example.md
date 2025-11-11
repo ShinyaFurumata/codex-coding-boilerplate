@@ -1,6 +1,6 @@
 # 概要
 
-これは、Next.js と Vercel AI SDK を利用した。自動動画生成サービス「xxx」の PRD です。
+これは、Next.js と Vercel AI SDK を利用した。自動動画生成サービス「xxx」の Architecture です。
 
 # ゴール
 

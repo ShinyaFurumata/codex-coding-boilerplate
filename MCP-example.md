@@ -1,6 +1,6 @@
 このプロジェクトで使う MCP サーバーの設定方法
 
-## config.toml 用
+## config.toml 用 (Codex)
 
 ```
 [mcp_servers.next-devtools]
@@ -29,7 +29,7 @@ args = ["-y", "chrome-devtools-mcp@latest"]
 startup_timeout_ms = 30000
 ```
 
-## mcp.json 用
+## mcp.json 用 (Cursor, Claude Code)
 
 ```
 {
