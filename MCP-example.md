@@ -1,8 +1,14 @@
 このプロジェクトで使う MCP サーバーの設定方法
+context7 は API KEY を取得して使う
 
 ## config.toml 用 (Codex)
 
 ```
+[mcp_servers.context7]
+args = ["-y", "@upstash/context7-mcp", "--api-key", "YOUR_API_KEY"]
+command = "npx"
+startup_timeout_ms = 20_000
+
 [mcp_servers.next-devtools]
 command = "npx"
 args = ["-y", "next-devtools-mcp@latest"]
@@ -34,6 +40,12 @@ startup_timeout_ms = 30000
 ```
 {
   "mcpServers": {
+    "context7": {
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "YOUR_API_KEY"
+      }
+    },
     "next-devtools": {
       "command": "npx",
       "args": ["-y", "next-devtools-mcp@latest"]
